@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Náutica :: Volantis Luxury Cleaning Company - Higienização Profissional de Embarcações</title>
+    <meta name="description"
+        content="Serviço de higienização premium para sua embarcação. Luxo, responsabilidade ambiental e resultados impecáveis.">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Custom Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'volantis-blue': '#0a2342',
+                        'volantis-blue-light': '#1e4b85',
+                        'volantis-gold': '#c5a059',
+                        'volantis-gold-hover': '#b08d4b',
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    backgroundImage: {
+                        'hero-pattern': "url('assets/images/hero.png')",
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body
+    class="font-sans text-slate-800 antialiased overflow-x-hidden selection:bg-volantis-gold selection:text-white text-lg leading-relaxed">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="block">
+                <img src="assets/images/logo.png" alt="Volantis"
+                    class="h-16 w-auto brightness-0 invert hover:opacity-80 transition-opacity">
+            </a>
+
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#inicio"
+                    class="text-slate-200 hover:text-volantis-gold transition-colors text-sm font-medium uppercase tracking-wide">Início</a>
+                <a href="#sobre"
+                    class="text-slate-200 hover:text-volantis-gold transition-colors text-sm font-medium uppercase tracking-wide">Sobre</a>
+                <a href="#servicos"
+                    class="text-slate-200 hover:text-volantis-gold transition-colors text-sm font-medium uppercase tracking-wide">Serviços</a>
+                <a href="#contato"
+                    class="px-6 py-2 bg-volantis-gold text-white font-medium rounded-full hover:bg-volantis-gold-hover transition-all shadow-lg hover:shadow-volantis-gold/50 transform hover:-translate-y-0.5">
+                    Contato
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-white text-2xl" id="mobile-menu-btn">
+                <i class="ph ph-list"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="md:hidden absolute top-full left-0 w-full bg-volantis-blue/95 backdrop-blur-md border-t border-white/10 hidden fade-in"
+            id="mobile-menu">
+            <div class="flex flex-col p-6 space-y-4">
+                <a href="#inicio" class="text-white hover:text-volantis-gold text-lg">Início</a>
+                <a href="#sobre" class="text-white hover:text-volantis-gold text-lg">Sobre</a>
+                <a href="#servicos" class="text-white hover:text-volantis-gold text-lg">Serviços</a>
+                <a href="#contato" class="text-volantis-gold font-medium text-lg">Contato</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <!-- Background Image Parallax -->
+        <div class="absolute inset-0 z-0">
+            <img src="assets/images/hero.png" alt="Luxury Yacht"
+                class="w-full h-full object-cover object-center scale-105" id="hero-img">
+            <!-- Global Dimmer -->
+            <div class="absolute inset-0 bg-black/50"></div>
+            <!-- Text Protection Gradient -->
+            <div class="absolute inset-0 bg-gradient-to-r from-volantis-blue/80 via-volantis-blue/40 to-transparent">
+            </div>
+            <!-- Bottom Fade -->
+            <div class="absolute inset-0 bg-gradient-to-t from-volantis-blue via-transparent to-transparent opacity-80">
+            </div>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10 pt-20">
+            <div class="max-w-3xl animate-slide-up">
+                <span
+                    class="inline-block py-1 px-3 border border-volantis-gold/50 rounded-full text-volantis-gold text-xs font-semibold tracking-widest uppercase mb-6 backdrop-blur-sm bg-volantis-blue/30">
+                    LUXURY CLEANING COMPANY
+                </span>
+                <h1 class="text-5xl md:text-7xl font-serif font-bold text-white leading-tight mb-6 drop-shadow-lg">
+                    Higienização <br>
+                    <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-volantis-gold to-white">Profissional</span>
+                </h1>
+                <p class="text-lg md:text-xl text-slate-200 font-light mb-10 max-w-2xl leading-relaxed drop-shadow-md">
+                    Qualidade e sustentabilidade em cada detalhe.
+                    Elevamos o padrão de cuidados para sua embarcação com produtos eco-friendly e tecnologia de ponta.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#contato"
+                        class="px-8 py-4 bg-volantis-gold text-white font-semibold rounded-full hover:bg-volantis-gold-hover transition-all shadow-lg hover:shadow-volantis-gold/50 transform hover:-translate-y-1 text-center">
+                        Agende seu Orçamento
+                    </a>
+                    <a href="#sobre"
+                        class="px-8 py-4 bg-transparent border border-white/30 text-white font-semibold rounded-full hover:bg-white/10 transition-all backdrop-blur-sm text-center">
+                        Saiba Mais
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Down Indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <a href="#sobre" class="text-white/50 hover:text-white transition-colors">
+                <i class="ph ph-caret-down text-3xl"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre" class="py-24 bg-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-1/3 h-full bg-slate-50 skew-x-12 transform translate-x-20 -z-0"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+
+                <div class="lg:w-1/2 relative group">
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+                        <img src="assets/images/interior.png" alt="Luxury Interior"
+                            class="w-full object-cover transform transition-transform duration-700 group-hover:scale-105">
+                        <div
+                            class="absolute inset-0 bg-volantis-blue/20 group-hover:bg-transparent transition-colors duration-500">
+                        </div>
+                    </div>
+                    <!-- Decorative Element -->
+                    <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-volantis-gold/10 rounded-full blur-3xl -z-10">
+                    </div>
+
+                    <!-- Detail Image Float -->
+                    <div
+                        class="hidden md:block absolute -bottom-12 -right-12 w-48 h-48 rounded-xl overflow-hidden shadow-2xl border-4 border-white transform translate-y-6">
+                        <img src="assets/images/detail.png" alt="Detail" class="w-full h-full object-cover">
+                    </div>
+                </div>
+
+                <div class="lg:w-1/2">
+                    <h4 class="text-volantis-gold font-bold tracking-widest uppercase text-sm mb-4">Sobre Nós</h4>
+                    <h2 class="text-4xl md:text-5xl font-serif font-bold text-volantis-blue mb-8">Excelência em
+                        <br>Higienização Náutica
+                    </h2>
+
+                    <p class="text-slate-600 leading-relaxed mb-6 text-xl">
+                        A <span class="font-semibold text-volantis-blue">Volantis Náutica</span> oferece um serviço de
+                        higienização premium para sua embarcação, combinando luxo e responsabilidade ambiental.
+                    </p>
+                    <p class="text-slate-600 leading-relaxed mb-8 text-lg">
+                        Utilizamos produtos eco-friendly de alta qualidade, garantindo a limpeza e conservação do seu
+                        patrimônio com o máximo de cuidado e sofisticação. Nossa missão é proporcionar bem-estar a bordo
+                        preservando o meio ambiente.
+                    </p>
+
+                    <ul class="space-y-4">
+                        <li class="flex items-center text-slate-700">
+                            <i class="ph-fill ph-check-circle text-volantis-gold text-xl mr-3"></i>
+                            <span>Produtos eco-friendly certificados</span>
+                        </li>
+                        <li class="flex items-center text-slate-700">
+                            <i class="ph-fill ph-check-circle text-volantis-gold text-xl mr-3"></i>
+                            <span>Resultados impecáveis em cada fibra</span>
+                        </li>
+                        <li class="flex items-center text-slate-700">
+                            <i class="ph-fill ph-check-circle text-volantis-gold text-xl mr-3"></i>
+                            <span>Valorização imediata do seu patrimônio</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicos" class="py-24 bg-volantis-blue text-white relative">
+        <!-- Background Pattern -->
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-10"
+            style="background-image: url('data:image/svg+xml,%3Csvg width=\'100\' height=\'20\' viewBox=\'0 0 100 20\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath d=\'M0 10 Q25 20 50 10 T100 10\' fill=\'none\' stroke=\'%23ffffff\' stroke-width=\'2\'/%3E%3C/svg%3E');">
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16 max-w-3xl mx-auto">
+                <h4 class="text-volantis-gold font-bold tracking-widest uppercase text-sm mb-4">O que fazemos</h4>
+                <h2 class="text-4xl md:text-5xl font-serif font-bold mb-6">Nossos Serviços</h2>
+                <p class="text-slate-300">
+                    Cuidamos de cada área da sua embarcação com técnicas especializadas e produtos específicos para o
+                    ambiente marinho.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service Card 1 -->
+                <div
+                    class="group relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md border border-white/10 p-10 rounded-3xl hover:border-volantis-gold/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-volantis-gold/10 overflow-hidden">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-volantis-gold/0 via-volantis-gold/0 to-volantis-gold/5 group-hover:via-volantis-gold/10 transition-all duration-700">
+                    </div>
+
+                    <div class="relative z-10">
+                        <div
+                            class="w-16 h-16 bg-volantis-gold/20 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-volantis-gold group-hover:scale-110 transition-all duration-500 shadow-lg group-hover:shadow-volantis-gold/50">
+                            <i
+                                class="ph ph-rug text-4xl text-volantis-gold group-hover:text-white transition-colors"></i>
+                        </div>
+                        <h3
+                            class="text-2xl font-serif font-bold mb-4 text-white group-hover:text-volantis-gold transition-colors">
+                            Higienização de Carpetes</h3>
+                        <p class="text-slate-300 text-base leading-relaxed group-hover:text-white transition-colors">
+                            Remoção profunda de manchas e odores, restaurando a cor e a textura original dos carpetes
+                            náuticos com tecnologia avançada.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div
+                    class="group relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md border border-white/10 p-10 rounded-3xl hover:border-volantis-gold/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-volantis-gold/10 overflow-hidden">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-volantis-gold/0 via-volantis-gold/0 to-volantis-gold/5 group-hover:via-volantis-gold/10 transition-all duration-700">
+                    </div>
+
+                    <div class="relative z-10">
+                        <div
+                            class="w-16 h-16 bg-volantis-gold/20 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-volantis-gold group-hover:scale-110 transition-all duration-500 shadow-lg group-hover:shadow-volantis-gold/50">
+                            <i
+                                class="ph ph-armchair text-4xl text-volantis-gold group-hover:text-white transition-colors"></i>
+                        </div>
+                        <h3
+                            class="text-2xl font-serif font-bold mb-4 text-white group-hover:text-volantis-gold transition-colors">
+                            Estofamentos e Colchões</h3>
+                        <p class="text-slate-300 text-base leading-relaxed group-hover:text-white transition-colors">
+                            Tratamento especial anti-ácaro e anti-mofo. Essencial para ambientes úmidos, garantindo
+                            saúde, conforto e durabilidade.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div
+                    class="group relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md border border-white/10 p-10 rounded-3xl hover:border-volantis-gold/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-volantis-gold/10 overflow-hidden">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-volantis-gold/0 via-volantis-gold/0 to-volantis-gold/5 group-hover:via-volantis-gold/10 transition-all duration-700">
+                    </div>
+
+                    <div class="relative z-10">
+                        <div
+                            class="w-16 h-16 bg-volantis-gold/20 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-volantis-gold group-hover:scale-110 transition-all duration-500 shadow-lg group-hover:shadow-volantis-gold/50">
+                            <i
+                                class="ph ph-flag text-4xl text-volantis-gold group-hover:text-white transition-colors"></i>
+                        </div>
+                        <h3
+                            class="text-2xl font-serif font-bold mb-4 text-white group-hover:text-volantis-gold transition-colors">
+                            Velas e Toldos</h3>
+                        <p class="text-slate-300 text-base leading-relaxed group-hover:text-white transition-colors">
+                            Limpeza técnica especializada que preserva a impermeabilização original e a proteção UV dos
+                            tecidos externos da embarcação.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Service Card 4 -->
+                <div
+                    class="group relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md border border-white/10 p-10 rounded-3xl hover:border-volantis-gold/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-volantis-gold/10 overflow-hidden">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-volantis-gold/0 via-volantis-gold/0 to-volantis-gold/5 group-hover:via-volantis-gold/10 transition-all duration-700">
+                    </div>
+
+                    <div class="relative z-10">
+                        <div
+                            class="w-16 h-16 bg-volantis-gold/20 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-volantis-gold group-hover:scale-110 transition-all duration-500 shadow-lg group-hover:shadow-volantis-gold/50">
+                            <i
+                                class="ph ph-boat text-4xl text-volantis-gold group-hover:text-white transition-colors"></i>
+                        </div>
+                        <h3
+                            class="text-2xl font-serif font-bold mb-4 text-white group-hover:text-volantis-gold transition-colors">
+                            Biminis e Doghouses</h3>
+                        <p class="text-slate-300 text-base leading-relaxed group-hover:text-white transition-colors">
+                            Limpeza detalhada das estruturas de proteção, removendo incrustações de salinidade e marcas
+                            severas de intempéries.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Service Card 5 -->
+                <div
+                    class="group relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md border border-white/10 p-10 rounded-3xl hover:border-volantis-gold/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-volantis-gold/10 overflow-hidden">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-volantis-gold/0 via-volantis-gold/0 to-volantis-gold/5 group-hover:via-volantis-gold/10 transition-all duration-700">
+                    </div>
+
+                    <div class="relative z-10">
+                        <div
+                            class="w-16 h-16 bg-volantis-gold/20 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-volantis-gold group-hover:scale-110 transition-all duration-500 shadow-lg group-hover:shadow-volantis-gold/50">
+                            <i
+                                class="ph ph-drop text-4xl text-volantis-gold group-hover:text-white transition-colors"></i>
+                        </div>
+                        <h3
+                            class="text-2xl font-serif font-bold mb-4 text-white group-hover:text-volantis-gold transition-colors">
+                            Banheiros</h3>
+                        <p class="text-slate-300 text-base leading-relaxed group-hover:text-white transition-colors">
+                            Sanitização completa com produtos de alta eficácia, eliminando bactérias e garantindo
+                            higiene total e odor agradável.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Highlight Card -->
+                <div
+                    class="group relative bg-gradient-to-br from-volantis-gold to-yellow-600 p-10 rounded-3xl transform hover:scale-105 transition-all duration-500 shadow-2xl flex flex-col justify-center items-center text-center overflow-hidden border border-white/20">
+                    <div
+                        class="absolute inset-0 bg-white/10 pattern-dots opacity-50 group-hover:opacity-75 transition-opacity">
+                    </div>
+                    <div class="absolute -top-10 -right-10 w-32 h-32 bg-white/20 rounded-full blur-2xl"></div>
+
+                    <div class="relative z-10">
+                        <span
+                            class="inline-block px-3 py-1 bg-white/20 rounded-full text-white/90 font-bold tracking-widest uppercase text-xs mb-4 backdrop-blur-sm">Oportunidade</span>
+                        <h3 class="text-5xl font-bold text-white mb-2 tracking-tight">25% OFF</h3>
+                        <p class="text-white font-medium mb-8 text-lg">No Primeiro Serviço</p>
+                        <a href="https://wa.me/5524992811305" target="_blank"
+                            class="inline-block px-8 py-4 bg-white text-volantis-gold font-bold rounded-xl hover:bg-slate-100 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                            Aproveitar Agora
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us Bar -->
+    <section class="py-12 bg-slate-50 border-b border-slate-200">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-wrap justify-center gap-8 md:gap-16 text-center">
+                <div class="flex flex-col items-center group">
+                    <div
+                        class="w-12 h-12 rounded-full bg-blue-100 text-volantis-blue flex items-center justify-center mb-3 group-hover:bg-volantis-blue group-hover:text-white transition-colors">
+                        <i class="ph ph-leaf text-2xl"></i>
+                    </div>
+                    <h5 class="font-bold text-slate-800">Eco-friendly</h5>
+                </div>
+                <div class="flex flex-col items-center group">
+                    <div
+                        class="w-12 h-12 rounded-full bg-blue-100 text-volantis-blue flex items-center justify-center mb-3 group-hover:bg-volantis-blue group-hover:text-white transition-colors">
+                        <i class="ph ph-star text-2xl"></i>
+                    </div>
+                    <h5 class="font-bold text-slate-800">Impecável</h5>
+                </div>
+                <div class="flex flex-col items-center group">
+                    <div
+                        class="w-12 h-12 rounded-full bg-blue-100 text-volantis-blue flex items-center justify-center mb-3 group-hover:bg-volantis-blue group-hover:text-white transition-colors">
+                        <i class="ph ph-globe-hemisphere-west text-2xl"></i>
+                    </div>
+                    <h5 class="font-bold text-slate-800">Preservação</h5>
+                </div>
+                <div class="flex flex-col items-center group">
+                    <div
+                        class="w-12 h-12 rounded-full bg-blue-100 text-volantis-blue flex items-center justify-center mb-3 group-hover:bg-volantis-blue group-hover:text-white transition-colors">
+                        <i class="ph ph-smiley text-2xl"></i>
+                    </div>
+                    <h5 class="font-bold text-slate-800">Bem-estar</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA / Contact Section -->
+    <section id="contato" class="py-24 relative overflow-hidden">
+        <div class="absolute inset-0 bg-slate-900 z-0">
+            <img src="assets/images/hero.png" class="w-full h-full object-cover opacity-20 grayscale mix-blend-overlay">
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-4xl mx-auto bg-white rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row">
+
+                <div
+                    class="md:w-1/2 bg-volantis-blue p-12 text-white flex flex-col justify-between relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-black/30">
+                    </div>
+
+                    <div class="relative z-10">
+                        <h3 class="text-3xl font-serif font-bold mb-6">Entre em Contato</h3>
+                        <p class="text-slate-300 mb-8">
+                            Pronto para transformar sua embarcação? Agende seu orçamento hoje mesmo.
+                        </p>
+
+                        <div class="space-y-6">
+                            <div class="flex items-center">
+                                <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center mr-4">
+                                    <i class="ph-fill ph-whatsapp-logo text-green-400 text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-slate-400 uppercase tracking-widest">WhatsApp</p>
+                                    <p class="font-bold text-lg hover:text-volantis-gold transition-colors">
+                                        <a href="https://wa.me/5524992811305">(24) 9 9281-1305</a>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center">
+                                <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center mr-4">
+                                    <i class="ph-fill ph-instagram-logo text-pink-400 text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-slate-400 uppercase tracking-widest">Instagram</p>
+                                    <p class="font-bold text-lg hover:text-volantis-gold transition-colors">
+                                        <a href="https://www.instagram.com/emporiovolantis/"
+                                            target="_blank">@emporiovolantis</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative z-10 mt-12">
+                        <p class="text-sm text-slate-400">
+                            Atendemos em toda região da Costa Verde e arredores.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="md:w-1/2 p-12 bg-white flex flex-col justify-center items-center text-center">
+                    <div class="mb-6 bg-green-50 p-6 rounded-full inline-block">
+                        <i class="ph-fill ph-whatsapp-logo text-6xl text-green-500"></i>
+                    </div>
+
+                    <h3 class="text-2xl font-serif font-bold text-slate-800 mb-4">Atendimento Exclusivo</h3>
+                    <p class="text-slate-600 mb-8 leading-relaxed max-w-sm mx-auto">
+                        Prefere agilidade? Fale diretamente com nosso especialista pelo WhatsApp e receba seu orçamento
+                        personalizado em instantes.
+                    </p>
+
+                    <a href="https://wa.me/5524992811305" target="_blank"
+                        class="group w-full sm:w-auto px-8 py-4 bg-green-600 text-white font-bold rounded-xl hover:bg-green-700 transition-all shadow-xl hover:shadow-green-600/30 flex items-center justify-center gap-3 transform hover:-translate-y-1">
+                        <span class="text-lg">Chamar no WhatsApp</span>
+                        <i class="ph-bold ph-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-950 py-12 text-center text-slate-500 text-sm border-t border-slate-900">
+        <p class="mb-2">&copy; 2026 Grupo Volantis. Todos os direitos reservados.</p>
+        <p>Desenvolvido por <a href="https://soarinho.com" target="_blank">Soarinho</a></p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/script.js"></script>
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/5524992811305" target="_blank"
+        class="fixed bottom-8 right-8 z-50 bg-volantis-gold text-white p-4 rounded-full shadow-2xl hover:bg-volantis-gold-hover transition-all hover:scale-110 flex items-center justify-center border-4 border-white animate-pulse hover:animate-none">
+        <i class="ph-fill ph-whatsapp-logo text-4xl"></i>
+    </a>
+
+</body>
+
+</html>
